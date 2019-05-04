@@ -1,9 +1,58 @@
 import React from 'react';
+import BigCalendar from 'react-big-calendar';
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './Calendar.css';
+
+let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k]);
+const today = new Date();
+const newDate = new Date();
+
+const myEvents = [
+	{
+		id: 0,
+		title: 'Bitcoin and Cryptocurrency Lecture',
+		allDay: false,
+		start: new Date(2019, 4, 1, 8, 40, 0),
+		end: new Date(2019, 4, 1, 10, 20, 0),
+	},
+	{
+		id: 1,
+		title: ' All Day Lecture Series on Quantum Theory',
+		allDay: true,
+		start: today,
+		end: today,
+	},
+	{
+		id: 2,
+		title: 'Lecture on Quantum Computing',
+		allDay: false,
+		start: newDate.setDate(today.getDate() + 1),
+		end: newDate.setDate(today.getDate() + 1),
+	},
+];
+
+// Setup the localizer by providing the moment (or globalize) Object
+// to the correct localizer.
+const localizer = BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
+
+const MyCalendar = props => (
+	<div style={{ height: '100vh' }}>
+		<BigCalendar
+			events={myEvents}
+			views={allViews}
+			step={60}
+			showMultiDayTimes
+			defaultDate={today}
+			localizer={localizer}
+		/>
+	</div>
+);
 
 const Calendar = () => (
 	<div>
-		<div class="month">
+		<MyCalendar />
+		{/*<div class="month">
 			<ul>
 				<li class="prev">&#10094;</li>
 				<li class="next">&#10095;</li>
@@ -73,7 +122,7 @@ const Calendar = () => (
 				<span class="active">30</span>
 			</li>
 			<li>31</li>
-		</ul>
+</ul>*/}
 	</div>
 );
 

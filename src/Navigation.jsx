@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-import logo from './images/FruitionLogo1.png';
+import logo from './images/FruitionLogo2.png';
 
 const Navigation = ({ history }) => (
 	<div>
@@ -12,8 +12,8 @@ const Navigation = ({ history }) => (
 				</Link>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Navbar.Collapse id="basic-navbar-nav">
-				<Nav className="mr-auto" pullRight>
+			<Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+				<Nav className="justify-content-end">
 					<Nav.Link eventKey={1} onClick={() => history.push('/fruition')}>
 						Assessment
 					</Nav.Link>
