@@ -9,6 +9,7 @@ import Fruition from './Fruition';
 import Dashboard from './Dashboard';
 import Notes from './Notes';
 import DateComponent from './DateComponent';
+import Pdf_reader from './Pdf_reader';
 
 function Landing() {
 	return <div className="landing" />;
@@ -26,6 +27,8 @@ class App extends Component {
 					<Route path="/dashboard" component={Dashboard} />
 					<Route path="/notes" component={Notes} />
 					<Route path="/date" component={DateComponent} />
+					<Route path="/pdf/:pdf" component={Pdf_reader} />
+
 				</div>
 			</Router>
 		);

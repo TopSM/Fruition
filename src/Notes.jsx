@@ -1,9 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import pdf from './DIODES.pdf';
+import Pdf_reader from './Pdf_reader';
 
 const Notes = () => (
 	<div>
-		<a href="Dashboard.html">Dashboard</a>
-		<a href="DIODES.pdf">Notes 1</a>
+		<h1>Class notes 1</h1>
+		<Link params={{ pdf: pdf }} to="/pdf">Notes 1</Link>
 	</div>
 );
 
