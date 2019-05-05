@@ -27,8 +27,6 @@ class App extends Component {
 					<Route path="/dashboard" component={Dashboard} />
 					<Route path="/notes" component={Notes} />
 					<Route path="/date" component={DateComponent} />
-					<Route path="/pdf/:pdf" component={Pdf_reader} />
-
 				</div>
 			</Router>
 		);
