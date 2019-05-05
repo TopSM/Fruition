@@ -11,12 +11,93 @@ const newDate = new Date();
 const myEvents = [
 	{
 		id: 0,
-		title: 'Bitcoin and Cryptocurrency Lecture',
+		title: 'The Politics of International Trade (II)',
 		allDay: false,
-		start: new Date(2019, 4, 1, 8, 40, 0),
-		end: new Date(2019, 4, 1, 10, 20, 0),
+		start: new Date(2019, 3, 2, 2, 0, 0),
+		end: new Date(2019, 3, 2, 3, 15, 0),
 	},
 	{
+		id: 1,
+		title: 'Globalization and Technology',
+		allDay: false,
+		start: new Date(2019,3, 4, 2, 0, 0),
+		end: new Date(2019,3, 4, 3, 15, 0),
+	},{
+		id: 2,
+		title: 'The Politics of Immigration (I)',
+		allDay: false,
+		start: new Date(2019,3, 9, 2, 0, 0),
+		end: new Date(2019,3, 9, 3, 15, 0),
+	},
+	{
+		id: 3,
+		title: 'The Politics of Immigration (II)',
+		allDay: false,
+		start: new Date(2019,3,11, 2, 0, 0),
+		end: new Date(2019,3,11, 3, 15, 0),
+	},
+	{
+		id: 4,
+		title: 'The Politics of International Development (I)',
+		allDay: false,
+		start: new Date(2019, 3,16, 2, 0, 0),
+		end: new Date(2019,3,16, 3, 15, 0),
+	},
+
+	{
+		// CHANGE TO A DIFFERENT COLOR THEN DEFAULT
+		id: 5,
+		title: 'READING RESPONSE #3 DUE',
+		allDay: false,
+		start: new Date(2019,3,18, 2, 0, 0),
+		end: new Date(2019,3,18, 3, 15, 0),
+	},
+	{
+		id: 6,
+		title: 'The Politics of International Development (I)',
+		allDay: false,
+		start: new Date(2019,3,18, 2, 0, 0),
+		end: new Date(2019,3,18, 3, 15, 0),
+	},
+	{
+		id: 7,
+		title: 'Climate Change and the Environment (II)',
+		allDay: false,
+		start: new Date(2019,3,30, 2, 0, 0),
+		end: new Date(2019,3,30, 3, 15, 0),
+	},
+	{
+		//change color 
+		id: 8,
+		title: 'SHORT PAPERS DUE',
+		allDay: false,
+		start: new Date(2019,4,2, 2, 0, 0),
+		end: new Date(2019, 4,2, 3, 15, 0),
+	},
+	{
+		id: 9,
+		title: 'Human Rights',
+		allDay: false,
+		start: new Date(2019, 4,7, 2, 0, 0),
+		end: new Date(2019, 4,7, 3, 15, 0),
+	},
+	{
+		id: 10,
+		title: 'Final review session',
+		allDay: false,
+		start: new Date(2019,4,9, 2, 0, 0),
+		end: new Date(2019,4,9, 3, 15, 0),
+	},
+	{
+		//change color 
+		id: 11,
+		title: 'FINAL EXAM',
+		allDay: false,
+		start: new Date(2019,4,16, 2, 0, 0),
+		end: new Date(2019,4,16, 3, 15, 0),
+	},
+
+	/*{
 		id: 1,
 		title: ' All Day Lecture Series on Quantum Theory',
 		allDay: true,
@@ -29,7 +110,7 @@ const myEvents = [
 		allDay: false,
 		start: newDate.setDate(today.getDate() + 1),
 		end: newDate.setDate(today.getDate() + 1),
-	},
+	},*/
 ];
 
 // Setup the localizer by providing the moment (or globalize) Object
