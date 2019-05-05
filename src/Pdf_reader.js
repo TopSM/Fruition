@@ -2,15 +2,12 @@ import React from 'react';
 import pdf from './DIODES.pdf';
 import './Pdf_reader.css';
 
-const Pdf_reader = (props) => {
-	const pdf=props.match.params.pdf 
-	console.log('this is pdf', pdf)
+const Pdf_reader = ({ note }) => {
 	return (
-	<div >
-	<p> hello world </p>
-		<iframe className='pdf' src={`${pdf}#zoom=100`}/>
-	</div>
-)
+		<div>
+			<iframe title="pdfReader" className="pdf" src={`${note}#zoom=100`} />
+		</div>
+	);
 };
 
 export default Pdf_reader;
