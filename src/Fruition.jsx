@@ -1,8 +1,24 @@
 import React from 'react';
+import {Table} from 'react-bootstrap'
 // import './Fruition.css';
 
-const Fruition = () => (
-	<div>
+
+
+class Fruition extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isShowingCurriculum: false,
+		};
+	}
+
+	onClassClick = () => {
+		this.setState({ isShowingCurriculum: !this.state.isShowingCurriculum});
+	};
+
+	render() {
+		return (
+		<div>
 		<div id="Main">
 	{//}		<h2>Fruition</h2>
 	}		<div id="Team_pic" />
@@ -13,16 +29,17 @@ const Fruition = () => (
 	}
 		<div id= 'grades'>
 			<h3 id= 'grade_title'> Grades</h3>			
-
-			<table>
+		<Table striped bordered hover variant="dark" className='table'>
 				<tr>
 					<th>Class</th>
 					<th>Grade</th>					
 				</tr>
 				{/* make a drop down*of another table showing grades*/}
-				<tr>
-					<td>Introduction to World Politics
-						<table id=' curriulum'>
+				<tr> 
+					<td> <a onClick={this.onClassClick}> Introduction to World Politics</a>
+					
+					{this.state.isShowingCurriculum &&
+						<table id=' curriulum' >
 						<tr>
 							<th>Item</th> 
 							<th>% of Grade</th>
@@ -65,6 +82,7 @@ const Fruition = () => (
 							<td>--</td> 
 						</tr>
 						</table>
+					}
 					</td>
 				{/* 
 
@@ -72,11 +90,13 @@ const Fruition = () => (
 
 					<td>90</td>
 				</tr>
-			</table>
+			</Table>
 
 		</div>
 		</div>
 	</div>
-);
+
+
+)}};
 
 export default Fruition;
