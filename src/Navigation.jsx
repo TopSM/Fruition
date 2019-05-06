@@ -15,6 +15,9 @@ const Navigation = ({ history }) => (
 			<Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
 				<Nav className="justify-content-end">
 					<Nav.Link eventKey={1} onClick={() => history.push('/fruition')}>
+						Main
+					</Nav.Link>
+					<Nav.Link eventKey={1} onClick={() => history.push('/')}>
 						Assessment
 					</Nav.Link>
 					<Nav.Link eventKey={1} onClick={() => history.push('/notes')}>
