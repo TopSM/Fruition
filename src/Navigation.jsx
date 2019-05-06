@@ -17,7 +17,7 @@ const Navigation = ({ history }) => (
 					<Nav.Link eventKey={1} onClick={() => history.push('/fruition')}>
 						Main
 					</Nav.Link>
-					<Nav.Link eventKey={1} onClick={() => history.push('/')}>
+					<Nav.Link eventKey={1} href='https://forms.gle/foU8wKm7RTfEfBpKA'>
 						Assessment
 					</Nav.Link>
 					<Nav.Link eventKey={1} onClick={() => history.push('/notes')}>
@@ -26,9 +26,10 @@ const Navigation = ({ history }) => (
 					<Nav.Link eventKey={1} onClick={() => history.push('/calendar')}>
 						Calendar
 					</Nav.Link>
-					<Nav.Link eventKey={1} onClick={() => history.push('/fruition')}>
+					{/*<Nav.Link eventKey={1} onClick={() => history.push('/fruition')}>
 						Logout
 					</Nav.Link>
+					*/}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>

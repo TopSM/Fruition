@@ -36,7 +36,7 @@ class Fruition extends React.Component {
 				</tr>
 				{/* make a drop down*of another table showing grades*/}
 				<tr> 
-					<td> <a onClick={this.onClassClick}> Introduction to World Politics</a>
+					<td align='center'> <a onClick={this.onClassClick}> Introduction to World Politics</a>
 					
 					{this.state.isShowingCurriculum &&
 						<table id=' curriulum' >
